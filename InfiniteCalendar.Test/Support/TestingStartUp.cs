@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 using AutoMapper;
@@ -60,7 +61,15 @@ namespace InfiniteCalendar.Test.Support
                 endpoints.MapControllers();
             });
 
-            Migrate();
+            try
+            {
+                Migrate();
+            }
+            catch (Microsoft.Data.SqlClient.SqlException e)
+            {
+                Console.WriteLine(e);
+            }
+
         }
 
         /**
