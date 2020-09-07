@@ -69,7 +69,7 @@ namespace InfiniteCalendar.Test.Support
             {
                 Console.WriteLine(e);
             }
-            
+
         }
 
         /**
