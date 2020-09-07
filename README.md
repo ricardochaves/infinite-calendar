@@ -1,4 +1,6 @@
 # Infinite Calendar
+<p align="left"><a href="https://github.com/ricardochaves/infinite-calendar"><img alt="All lints status" src="https://github.com/ricardochaves/infinite-calendar/workflows/integration-tests/badge.svg"></a> <a href="https://github.com/ricardochaves/infinite-calendar"><img alt="All lints status" src="https://github.com/ricardochaves/infinite-calendar/workflows/dotnet-format/badge.svg"></a></p>
+
 
 ## Migrations
 
