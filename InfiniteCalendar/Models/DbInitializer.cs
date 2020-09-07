@@ -21,7 +21,7 @@ namespace InfiniteCalendar.Models
 
             var holidays = new List<Holiday>()
             {
-                new Holiday(null,dateTime:DateTime.Now, name:"hl_01")
+                new Holiday(null,dateTime:DateTime.Now, name:"hl_01", null)
             };
 
             holidays.ForEach(delegate (Holiday holiday) { context.Holidays.Add(holiday); });

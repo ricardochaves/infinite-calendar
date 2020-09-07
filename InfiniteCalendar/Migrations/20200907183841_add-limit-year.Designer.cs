@@ -4,14 +4,16 @@ using InfiniteCalendar.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace InfiniteCalendar.Migrations
 {
     [DbContext(typeof(InfiniteCalendarContext))]
-    partial class InfiniteCalendarContextModelSnapshot : ModelSnapshot
+    [Migration("20200907183841_add-limit-year")]
+    partial class addlimityear
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

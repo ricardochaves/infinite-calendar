@@ -111,7 +111,7 @@ namespace InfiniteCalendar.Test.Integration
         public async Task putShouldReturnNotFoundWhenIdNotExists()
         {
             // Arrange
-            var holidayForUpdate = new Holiday(99999, DateTime.Now, "test_1");
+            var holidayForUpdate = new Holiday(99999, DateTime.Now, "test_1",null);
 
             var putData = JsonConvert.SerializeObject(holidayForUpdate);
             var payload = new StringContent(putData, Encoding.UTF8, "application/json");
@@ -128,7 +128,7 @@ namespace InfiniteCalendar.Test.Integration
         public async Task postShouldCreateNewHoliday()
         {
             // Arrange
-            var newHolidayDto = new HolidayDto(null, DateTime.Now, "new_holiday");
+            var newHolidayDto = new HolidayDto(null, DateTime.Now, "new_holiday",null);
 
             var putData = JsonConvert.SerializeObject(newHolidayDto);
             var payload = new StringContent(putData, Encoding.UTF8, "application/json");
@@ -149,7 +149,7 @@ namespace InfiniteCalendar.Test.Integration
         public async Task postShouldBadRequestWhenDataIsInvalid()
         {
             // Arrange
-            var newHolidayDto = new HolidayDto(null, DateTime.Now, "new_holiday");
+            var newHolidayDto = new HolidayDto(null, DateTime.Now, "new_holiday",null);
 
             var putData = "{'Id':null,'DateTime':'2020-09-06T14:03:08.87279-03:00'}";
             var payload = new StringContent(putData, Encoding.UTF8, "application/json");
