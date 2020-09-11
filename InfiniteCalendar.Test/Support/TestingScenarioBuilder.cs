@@ -17,8 +17,7 @@ namespace InfiniteCalendar.Test.Support
             _context = context;
         }
 
-        public async Task<List<Holiday>> buildScenarioWithTwentyHolidaysAsync(string name1 = "Room 1", string name2 = "Room 2",
-            string name3 = "Room 3")
+        public async Task<List<Holiday>> buildScenarioWithTwentyHolidaysAsync()
         {
 
             var holidays = new List<Holiday>();
