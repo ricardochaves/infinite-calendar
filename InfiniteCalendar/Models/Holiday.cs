@@ -17,7 +17,7 @@ namespace InfiniteCalendar.Models
         public int? Id { get; private set; }
         public DateTime DateTime { get; set; }
         public string Name { get; set; }
-        
+
         public int? LimitYear { get; set; }
     }
 }

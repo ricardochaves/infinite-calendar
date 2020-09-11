@@ -13,8 +13,8 @@ namespace InfiniteCalendar.Models
         }
 
         public string Name { get; }
-        public int number { get;  }
-        public string slugName { get;  }
-        public List<Day> days { get;  }
+        public int number { get; }
+        public string slugName { get; }
+        public List<Day> days { get; }
     }
 }

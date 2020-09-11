@@ -35,11 +35,11 @@ namespace InfiniteCalendar.Test.Support
 
         public async Task buildScenarioWithFiveHolidaysWithSequenceName()
         {
-            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_1",null));
-            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_2",null));
-            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_3",null));
-            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_4",null));
-            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_5",null));
+            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_1", null));
+            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_2", null));
+            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_3", null));
+            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_4", null));
+            await _context.AddAsync(new Holiday(null, DateTime.Now, "h_5", null));
             await _context.SaveChangesAsync();
         }
 

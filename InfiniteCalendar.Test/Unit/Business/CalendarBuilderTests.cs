@@ -2,14 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using InfiniteCalendar.Business;
 using InfiniteCalendar.Models;
 using InfiniteCalendar.Test.Support;
+
 using Xunit;
 
 namespace InfiniteCalendar.Test.Unit.Business
 {
-    public class CalendarBuilderTests: TestingCaseFixture<TestingStartUp>
+    public class CalendarBuilderTests : TestingCaseFixture<TestingStartUp>
     {
         [Fact]
         public void shouldCreateCalendarWithOneHoliday()
@@ -19,9 +21,9 @@ namespace InfiniteCalendar.Test.Unit.Business
             {
                 new Holiday(null, new DateTime(2020,1,1), "holiday_1", null)
             };
-            
+
             var calendarbuilder = new CalendarBuilder(2020, holidays);
-            
+
             // Act
             var calendar = calendarbuilder.build();
 
@@ -32,9 +34,9 @@ namespace InfiniteCalendar.Test.Unit.Business
             Assert.True(calendar.months.First().days.First().isHoliday);
             Assert.False(calendar.months.First().days.Last().isHoliday);
         }
-        
-       
+
+
     }
-    
-    
+
+
 }

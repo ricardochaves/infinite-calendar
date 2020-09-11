@@ -10,9 +10,9 @@ namespace InfiniteCalendar.Models
             this.months = months;
         }
 
-        public int year { get;  }
-        public List<Month> months { get;  }
-        
-        
+        public int year { get; }
+        public List<Month> months { get; }
+
+
     }
 }

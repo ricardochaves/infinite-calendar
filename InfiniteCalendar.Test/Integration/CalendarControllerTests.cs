@@ -4,14 +4,17 @@ using System.Linq;
 using System.Net;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
+
 using InfiniteCalendar.Models;
 using InfiniteCalendar.Test.Support;
+
 using Newtonsoft.Json;
+
 using Xunit;
 
 namespace InfiniteCalendar.Test.Integration
 {
-    public class CalendarControllerTests: TestingCaseFixture<TestingStartUp>
+    public class CalendarControllerTests : TestingCaseFixture<TestingStartUp>
     {
         [Fact]
         public async Task getShouldReturnStatusCodeOK()
@@ -36,18 +39,18 @@ namespace InfiniteCalendar.Test.Integration
 
             await _context.Holidays.AddRangeAsync(holidays);
             await _context.SaveChangesAsync();
-            
+
             // Act
             var response = await _client.GetAsync($"/calendar/2020");
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var calendar =  JsonConvert.DeserializeObject<Calendar>(await response.Content.ReadAsStringAsync());
+            var calendar = JsonConvert.DeserializeObject<Calendar>(await response.Content.ReadAsStringAsync());
             Assert.True(calendar.months.First().days.First().isHoliday);
-            
+
             Assert.Equal(12, calendar.months.Count);
-            
+
             var day = calendar.months.First(m => m.number == 11).days.First(d => d.day == 12);
             Assert.False(day.isHoliday);
         }

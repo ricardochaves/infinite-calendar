@@ -13,8 +13,8 @@ namespace InfiniteCalendar.Models
         }
 
         public int day { get; }
-        public bool isHoliday { get;  }
-        public Holiday? Holiday { get;  }
-        public DateTime DateTime { get;  }
+        public bool isHoliday { get; }
+        public Holiday? Holiday { get; }
+        public DateTime DateTime { get; }
     }
 }

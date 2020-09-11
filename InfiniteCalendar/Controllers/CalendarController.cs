@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
+
 using AutoMapper;
+
 using InfiniteCalendar.Business;
 using InfiniteCalendar.Models;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Logging;
@@ -30,7 +33,7 @@ namespace InfiniteCalendar.Controllers
         [HttpGet("{year}")]
         public ActionResult<Calendar> Get(int year)
         {
-            var holidays = _context.Holidays.Where(h=>h.LimitYear>=year||h.LimitYear==null).ToList();
+            var holidays = _context.Holidays.Where(h => h.LimitYear >= year || h.LimitYear == null).ToList();
             var calendar = new CalendarBuilder(year, holidays).build();
             return calendar;
         }
