@@ -34,7 +34,7 @@ namespace InfiniteCalendar.Test.Support
 
             services.AddHttpContextAccessor()
                 .AddDbContext<InfiniteCalendarContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionTest"))
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
                         .EnableSensitiveDataLogging(), ServiceLifetime.Singleton)
                 .AddAutoMapper(startupAssembly)
                 .AddControllers().AddNewtonsoftJson()
@@ -79,7 +79,7 @@ namespace InfiniteCalendar.Test.Support
         {
 
             // testing migrations
-            var dbConnectionString = Configuration.GetConnectionString("DefaultConnectionTest");
+            var dbConnectionString = Configuration.GetConnectionString("DefaultConnection");
             var options = new DbContextOptionsBuilder<InfiniteCalendarContext>()
                 .UseSqlServer(dbConnectionString)
                 .Options;

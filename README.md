@@ -20,4 +20,3 @@ https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settin
 - Camel case or Pascal case?
 - remove seed from init project
 - remove database from connection string
-- resolve test dead lock
